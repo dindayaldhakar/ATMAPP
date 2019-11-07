@@ -1,0 +1,22 @@
+<div class="container">
+<div class="left">
+	<h1>Welcome to ATM</h1>
+
+	<label>Enter the Amount</label>
+	<input type="number" (change)="getValue($event)">	
+	<button (click)="getMoney()">Get Money</button>	
+</div>
+<div class="right">
+	<h3>You will get a following amount</h3>
+	<ul *ngIf="noteStatus">
+	  <li *ngFor="let item of noteCounter; let i = index">
+	  <span>	  
+	  {{noteCounter[i]}} notes of {{amountList[i]}}
+	  </span>
+	 
+	  </li>
+	</ul>	
+</div>
+
+
+<div>
